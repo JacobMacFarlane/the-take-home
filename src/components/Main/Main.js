@@ -1,5 +1,6 @@
 import React from "react";
 import NewsCard from "../NewsCard/NewsCard";
+import './Main.css'
 
 const Main = ({ articles}) => {
     const allNews = articles.map((article, index) => {

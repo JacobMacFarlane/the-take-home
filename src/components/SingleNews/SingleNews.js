@@ -3,6 +3,8 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { fetchAllArticles } from "../../apiCalls";
+import './SingleNews.css'
+
 const SingleNews = () => {
     const [loading, setLoading] = useState(false);
     const [articles, setArticles] = useState([])
@@ -26,23 +28,25 @@ const SingleNews = () => {
         fetchSingle(title);
         setLoading(false);
     }, [title]);
-console.log(singularArticle[0]);
+    let dateFormat = singularArticle[0]?.publishedAt?.split('T');
+    let timeFormat = dateFormat?.[1]?.split('Z')[0]?.split(":")[0].includes("12" || "13" || "14" ||"15" || "16" || "17" ||"18" || "19" || "20" ||"21" || "22" || "23" || "24") ? "AM" : "PM";
+    console.log(timeFormat);
     return (
-        <div>
+        <div className="container">
             {loading === true ? (
                 <p>loading....</p>
             ) : singularArticle.length > 0 ? (
                 <>
                     <div>
-                        <h2>{singularArticle[0].title}</h2>
-                        <h3>{singularArticle[0].author}</h3>
-                        <p>{singularArticle[0].publishedAt}</p>
-                        <p>Source: {singularArticle[0].source.name}</p>
-                        <a href={singularArticle[0].url}>Read the whole story!</a>
+                        <h2 className="title">{singularArticle[0].title}</h2>
+                        <h3 className="author">Written by:{singularArticle[0].author}</h3>
+                        <p className="publishedAt">{`Published on:${dateFormat[0]} at ${dateFormat[1].split('Z')[0]} ${timeFormat}`}</p>
+                        <p className="source">Source: {singularArticle[0].source.name}</p>
+                        <a className="link" href={singularArticle[0].url}>Read the whole story!</a>
                     </div>
                     <div>
-                        <img src={singularArticle[0].urlToImage} height={200} width={200} />
-                        <p>Snippet: {singularArticle[0].content}</p>
+                        <img className="image" src={singularArticle[0].urlToImage} height={200} width={200} />
+                        <p className="content">Snippet: {singularArticle[0].content}</p>
                     </div>
                 </>
             ) : (

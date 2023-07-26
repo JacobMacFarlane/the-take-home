@@ -14,8 +14,8 @@ const NewsCard = ({ article }) => {
                 />
             </NavLink>
             <div>
-                <span><p>{article.title}</p><p>{dateFormat[0]}</p></span>
-                <p>{article.description}</p>
+                <span><p className="title">{article.title}</p><p className="date">{dateFormat[0]}</p></span>
+                <p className="description">{article.description}</p>
             </div>
         </div>
     )

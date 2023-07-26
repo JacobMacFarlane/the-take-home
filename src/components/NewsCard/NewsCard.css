@@ -1,0 +1,39 @@
+.card-cont {
+    border: 1px solid #ddd;
+    padding: 15px; /* Increase padding to give more space inside the card */
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .card-cont a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .card-cont span {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card-cont .title {
+    font-size: 18px; /* Increase font size for the title */
+    font-weight: bold;
+    margin-bottom: 10px; /* Add some margin at the bottom of the title */
+  }
+  
+  .card-cont .date {
+    font-size: 14px; /* Decrease font size for the date */
+    color: #888; /* Use a lighter color for the date */
+  }
+  
+  .card-cont .description {
+    font-size: 14px; /* Decrease font size for the description */
+    color: #555; /* Use a slightly darker color for the description */
+    margin-top: 10px; /* Add some margin at the top of the description */
+  }

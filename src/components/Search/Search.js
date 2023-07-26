@@ -9,6 +9,7 @@ const Search = (props) => {
     props.search(query);
     clearInputs();
   };
+  
   const clearInputs = () => {
     setQuery("");
   };
