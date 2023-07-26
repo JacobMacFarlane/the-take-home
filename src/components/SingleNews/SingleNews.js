@@ -35,8 +35,10 @@ console.log(singularArticle[0]);
                 <>
                     <div>
                         <h2>{singularArticle[0].title}</h2>
+                        <h3>{singularArticle[0].author}</h3>
                         <p>{singularArticle[0].publishedAt}</p>
                         <p>Source: {singularArticle[0].source.name}</p>
+                        <a href={singularArticle[0].url}>Read the whole story!</a>
                     </div>
                     <div>
                         <img src={singularArticle[0].urlToImage} height={200} width={200} />
