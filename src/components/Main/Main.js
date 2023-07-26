@@ -12,7 +12,6 @@ const Main = ({ articles}) => {
         )
     })
 
-
     return (
         <div className="articles-cont">
             {allNews}

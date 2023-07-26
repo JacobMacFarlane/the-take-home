@@ -23,7 +23,7 @@ function App() {
       setError("fetch")
     }
   };
-console.log(articles.length)
+
   const searchResults = (searchValue) => {
     setStoredArticles(articles);
     let lowerSearchValue = searchValue.toLowerCase();
@@ -34,8 +34,6 @@ console.log(articles.length)
         article.description?.toLowerCase().includes(lowerSearchValue)
       );
     });
-  
-    console.log(nameSearchResults, 'important');
     
     if (!nameSearchResults.length) {
       setError("search");

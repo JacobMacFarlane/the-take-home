@@ -4,6 +4,7 @@ import './NewsCard.css'
 
 const NewsCard = ({ article }) => {
     let dateFormat = article.publishedAt.split('T')
+    
     return (
         <div className="card-cont">
             <NavLink to={`/news/${article.title}`}>

@@ -3,6 +3,7 @@ import './Error.css'
 import { NavLink } from "react-router-dom";
 
 const Error = ({ message }) => {
+    
     if (message === "url") {
         return(
           <div className='error-url-container'>

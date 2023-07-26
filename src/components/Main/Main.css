@@ -1,6 +1,6 @@
 .articles-cont {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Create grid with minimum column width of 300px */
-    gap: 20px; /* Add some gap between the news cards */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
     margin: 20px;
   }

@@ -17,7 +17,6 @@ const SingleNews = () => {
             let thisOne = data.articles.filter((article) => {
                 return article.title === newsTitle;
             })
-            console.log(thisOne)
             setSingularArticle(thisOne);
           } catch (error) {
             console.log(error)
@@ -28,9 +27,10 @@ const SingleNews = () => {
         fetchSingle(title);
         setLoading(false);
     }, [title]);
+
     let dateFormat = singularArticle[0]?.publishedAt?.split('T');
     let timeFormat = dateFormat?.[1]?.split('Z')[0]?.split(":")[0].includes("12" || "13" || "14" ||"15" || "16" || "17" ||"18" || "19" || "20" ||"21" || "22" || "23" || "24") ? "AM" : "PM";
-    console.log(timeFormat);
+    
     return (
         <div className="container">
             {loading === true ? (

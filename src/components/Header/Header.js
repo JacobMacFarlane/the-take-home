@@ -4,9 +4,14 @@ import './Header.css';
 
 const Header = () => {
     return (
-        <div>
-            Header
-        </div>
+        <header className="header">
+            <div className="logo">
+                News App
+            </div>
+            <nav className="nav">
+                <NavLink to="/" exact activeClassName="active-link">Home</NavLink>
+            </nav>
+        </header>
     )
 }
 
