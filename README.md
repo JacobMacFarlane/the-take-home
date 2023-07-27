@@ -1,71 +1,63 @@
-# Getting Started with Create React App
+# News Reader App
+This project is a news reader application that retrieves articles from the NewsAPI and displays them to the user.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Installation
+Clone the repo
+Copy code
+git clone 
+Install dependencies - npm install
+To start the app, run: npm start
 
-## Available Scripts
+## The app will load with a list of the top headlines. You can:
 
-In the project directory, you can run:
+- Click on an article to see a detailed view with the full content
+- Search articles by keyword
+- Sort articles by relevance, popularity, or date
 
-### `npm start`
+## The app is built with:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React for the UI
+- React Router for routing
+- NewsAPI for the article data
+- Custom CSS for styling
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Wins
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Having a second state to store results before search
+- Learning I can use ? to make things optional(Similar to TypeScript)
 
-### `npm run build`
+## Challenges
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Having limited Calls with API resulted in me using mock data
+- Figuring out what to use for URL since API did not return unique id
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Some key aspects of the implementation:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Articles are fetched on load and stored in React state
+- A route passes the article title to show a detailed view
+- Search filters the articles state based on user input
+- Sorting sorts the articles before display
+- Error handling displays messages if API call or search fails
+- Mobile responsiveness with CSS
 
-### `npm run eject`
+## Overall this implementation covers:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- React fundamentals including state, effects, routing
+- Consuming a 3rd party API
+- Search, filter, sort functionality
+- Detailed article views
+- Error handling
+-Basic responsive design
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Next Steps
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Some possible improvements with more time:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# the-take-home
+- Pagination for large results
+- Save favorites
+- Share articles
+- Improved search (date range, categories, sources)
+- Login to customize results
+- transitions/animations
+- More robust error handling
